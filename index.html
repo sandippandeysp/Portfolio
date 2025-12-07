@@ -41,15 +41,15 @@
 
     <section id="portfolio" class="portfolio">
         <h2>Portfolio</h2>
-        <div class="project">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Project Title 1</h3>
-            <p>Brief description of project 1.</p>
+        <div class="project card-image">
+            <img class="card-image" src="Red Bull.jpg" alt="Project 1">
+            <h3>Graphics Desings</h3>
+            <p>Creating meaningful connections through <b> purpose-driven graphic design. </b></p>
             <a href="Graphics.html">View Project</a> 
 
         </div>
         <div class="project">
-            <img src="project2.jpg" alt="Project 2">
+            <img class="card-image"  src="Red Bull.jpg" alt="Project 2">
             <h3>Project Title 2</h3>
             <p>Brief description of project 2.</p>
             <a href="#">View Project</a> 
@@ -75,18 +75,7 @@
         <p>&copy; 2025 sandippandeysp. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Basic JavaScript for smooth scrolling (optional)
-        document.querySelectorAll('nav a').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
