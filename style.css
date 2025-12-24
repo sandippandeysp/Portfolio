@@ -1,0 +1,266 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #e0f7fa;
+}
+
+.hero-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.project {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.project img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #333;
+    color: white;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 20px;
+    }
+
+    nav ul li {
+        margin: 0 20px;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .portfolio {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px; 
+    }
+}
+
+
+
+/* responsive card image  */
+
+.card-image {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+} 
+
+    /* Add this to your style.css file */
+.card-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap to the next line */
+    gap: 20px; /* Space between the cards */
+    justify-content: center; /* Centers the cards in the gallery */
+}
+
+.project-card {
+    /* Define the max size of your card */
+    width: 100%;
+    max-width: 350px; 
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden; /* Keeps image corners rounded */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-image-wrapper img {
+    /* Ensure the image fills the card area and is responsive */
+    width: 100%;
+    height: 200px; /* Fixed height for consistent look */
+    object-fit: cover; /* Crops the image nicely */
+}
+
+.card-content {
+    padding: 15px;
+} 
+
+.card-font-link{
+ color: inherit; 
+ text-decoration-line: none;
+}
+ 
+
+/* btn  */
+.btn-projects {
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background-color: #2563eb; /* Modern Blue */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-projects:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+.btn-projects:active {
+  transform: translateY(0);
+}  
+
+
+
+
+
+/* ---------------------------VIDEO---------------------- */
+
+/* Force graphics and videos to be visible */
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block; /* Ensures it takes up space */
+}
+
+.video-container {
+    width: 100%;
+    position: relative;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Ensure the cards look like your image cards */
+.video-card {
+    width: 100%;
+    max-width: 350px; 
+    text-decoration: none;
+    color: inherit;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden; /* Keeps image corners rounded */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+
+} 
+
+.video-card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    height: 100%;
+}
+ 
+
+
+/* description btn update  */
+/* Default state: hide text after 2 lines */
+.description {
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Change this number to show more/less starting lines */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    transition: all 0.3s ease; /* Smooth transition when opening */
+    margin-bottom: 10px;
+}
+
+/* Expanded state: show all text */
+.description.expanded {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+}
+
+/* Style for the button itself */
+.view-more-btn {
+    background: none;
+    border: none;
+    color: #2563eb; /* Matches your theme blue */
+    padding: 0;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.view-more-btn:hover {
+    color: #1d4ed8;
+}
+
+
