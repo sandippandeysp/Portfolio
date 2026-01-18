@@ -17,7 +17,7 @@ async function loadPortfolio() {
                         <a href="${item.link}" target="_blank" style="text-decoration: none; color: inherit;">
                             <img src="${item.link}" alt="${item.title}" onerror="this.src='icon.png'">  </a>
                             <div class="card-content">
-                                <span class="badge">${item.category || 'Graphic'}</span>
+                                 <span class="badge" style="background:#2563eb; color:white;">${item.category || 'Graphic'}</span>
                                 <h3>${item.title}</h3>
                                 <p id="graphic-desc-${index}" class="description">${item.description}</p>
                                 <button onclick="toggleDesc('graphic-desc-${index}', this)" class="view-more-btn">View More</button>
@@ -31,8 +31,6 @@ async function loadPortfolio() {
             const videos = data.filter(item => item.type?.toLowerCase().trim() === 'video');
             videoContainer.innerHTML = videos.map((item, index) => {
                 const ytId = item.link.match(/(?:youtu\.be\/|youtube\.com\/(?:.*v=|.*\/|.*embed\/))([^?&]+)/)?.[1];
-                // const embedUrl = `https://www.youtube.com/embed/${ytId}`;
-                // MODIFIED EMBED URL for a cleaner view
                 const embedUrl = `https://www.youtube.com/embed/${ytId}?modestbranding=1&rel=0&showinfo=0&controls=1`;
 
                 return `
